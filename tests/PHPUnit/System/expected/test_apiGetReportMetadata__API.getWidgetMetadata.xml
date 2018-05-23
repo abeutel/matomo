@@ -41,6 +41,25 @@
 		<isWide>0</isWide>
 	</row>
 	<row>
+		<name>Visitor profile</name>
+		<category>
+			<id>General_Visitors</id>
+			<name>Visitors</name>
+			<order>5</order>
+			<icon>icon-reporting-visitors</icon>
+		</category>
+		<subcategory />
+		<module>Live</module>
+		<action>getVisitorProfilePopup</action>
+		<order>25</order>
+		<parameters>
+			<module>Live</module>
+			<action>getVisitorProfilePopup</action>
+		</parameters>
+		<uniqueId>widgetLivegetVisitorProfilePopup</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
 		<name>Visits Overview (with graph)</name>
 		<category>
 			<id>General_Visitors</id>
@@ -117,25 +136,6 @@
 				<isReport>1</isReport>
 			</row>
 		</widgets>
-	</row>
-	<row>
-		<name>Visitor profile</name>
-		<category>
-			<id>General_Visitors</id>
-			<name>Visitors</name>
-			<order>5</order>
-			<icon>icon-reporting-visitors</icon>
-		</category>
-		<subcategory />
-		<module>Live</module>
-		<action>getVisitorProfilePopup</action>
-		<order>25</order>
-		<parameters>
-			<module>Live</module>
-			<action>getVisitorProfilePopup</action>
-		</parameters>
-		<uniqueId>widgetLivegetVisitorProfilePopup</uniqueId>
-		<isWide>0</isWide>
 	</row>
 	<row>
 		<name>Visits Over Time</name>
@@ -3212,98 +3212,41 @@
 		<isReport>1</isReport>
 	</row>
 	<row>
-		<name>Premium Features</name>
+		<name>Top Keywords for Page URL</name>
 		<category>
-			<id>About Matomo</id>
-			<name>About Matomo</name>
+			<id>SEO</id>
+			<name>SEO</name>
 			<order>99</order>
 			<icon />
 		</category>
 		<subcategory />
-		<module>Marketplace</module>
-		<action>getPremiumFeatures</action>
-		<order>20</order>
-		<parameters>
-			<module>Marketplace</module>
-			<action>getPremiumFeatures</action>
-		</parameters>
-		<uniqueId>widgetMarketplacegetPremiumFeatures</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>Movers and Shakers</name>
-		<category>
-			<id>Insights_WidgetCategory</id>
-			<name>Insights</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>Insights</module>
-		<action>getOverallMoversAndShakers</action>
+		<module>Referrers</module>
+		<action>getKeywordsForPage</action>
 		<order>99</order>
 		<parameters>
-			<module>Insights</module>
-			<action>getOverallMoversAndShakers</action>
+			<module>Referrers</module>
+			<action>getKeywordsForPage</action>
 		</parameters>
-		<uniqueId>widgetInsightsgetOverallMoversAndShakers</uniqueId>
+		<uniqueId>widgetReferrersgetKeywordsForPage</uniqueId>
 		<isWide>0</isWide>
 	</row>
 	<row>
-		<name>Latest Marketplace Updates</name>
+		<name>SEO Rankings</name>
 		<category>
-			<id>About Matomo</id>
-			<name>About Matomo</name>
+			<id>SEO</id>
+			<name>SEO</name>
 			<order>99</order>
 			<icon />
 		</category>
 		<subcategory />
-		<module>Marketplace</module>
-		<action>getNewPlugins</action>
-		<order>19</order>
-		<parameters>
-			<module>Marketplace</module>
-			<action>getNewPlugins</action>
-		</parameters>
-		<uniqueId>widgetMarketplacegetNewPlugins</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>Insights Overview</name>
-		<category>
-			<id>Insights_WidgetCategory</id>
-			<name>Insights</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>Insights</module>
-		<action>getInsightsOverview</action>
+		<module>SEO</module>
+		<action>getRank</action>
 		<order>99</order>
 		<parameters>
-			<module>Insights</module>
-			<action>getInsightsOverview</action>
+			<module>SEO</module>
+			<action>getRank</action>
 		</parameters>
-		<uniqueId>widgetInsightsgetInsightsOverview</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>Support Matomo!</name>
-		<category>
-			<id>About Matomo</id>
-			<name>About Matomo</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>CoreHome</module>
-		<action>getDonateForm</action>
-		<order>5</order>
-		<parameters>
-			<module>CoreHome</module>
-			<action>getDonateForm</action>
-		</parameters>
-		<uniqueId>widgetCoreHomegetDonateForm</uniqueId>
+		<uniqueId>widgetSEOgetRank</uniqueId>
 		<isWide>0</isWide>
 	</row>
 	<row>
@@ -3345,82 +3288,6 @@
 		<isWide>0</isWide>
 	</row>
 	<row>
-		<name>Matomo Changelog</name>
-		<category>
-			<id>About Matomo</id>
-			<name>About Matomo</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>RssWidget</module>
-		<action>rssChangelog</action>
-		<order>99</order>
-		<parameters>
-			<module>RssWidget</module>
-			<action>rssChangelog</action>
-		</parameters>
-		<uniqueId>widgetRssWidgetrssChangelog</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>SEO Rankings</name>
-		<category>
-			<id>SEO</id>
-			<name>SEO</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>SEO</module>
-		<action>getRank</action>
-		<order>99</order>
-		<parameters>
-			<module>SEO</module>
-			<action>getRank</action>
-		</parameters>
-		<uniqueId>widgetSEOgetRank</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>Top Keywords for Page URL</name>
-		<category>
-			<id>SEO</id>
-			<name>SEO</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>Referrers</module>
-		<action>getKeywordsForPage</action>
-		<order>99</order>
-		<parameters>
-			<module>Referrers</module>
-			<action>getKeywordsForPage</action>
-		</parameters>
-		<uniqueId>widgetReferrersgetKeywordsForPage</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>Example Widget Name</name>
-		<category>
-			<id>About Matomo</id>
-			<name>About Matomo</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>ExamplePlugin</module>
-		<action>myExampleWidget</action>
-		<order>99</order>
-		<parameters>
-			<module>ExamplePlugin</module>
-			<action>myExampleWidget</action>
-		</parameters>
-		<uniqueId>widgetExamplePluginmyExampleWidget</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
 		<name>System Summary</name>
 		<category>
 			<id>About Matomo</id>
@@ -3459,6 +3326,63 @@
 		<isWide>0</isWide>
 	</row>
 	<row>
+		<name>Support Matomo!</name>
+		<category>
+			<id>About Matomo</id>
+			<name>About Matomo</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>CoreHome</module>
+		<action>getDonateForm</action>
+		<order>5</order>
+		<parameters>
+			<module>CoreHome</module>
+			<action>getDonateForm</action>
+		</parameters>
+		<uniqueId>widgetCoreHomegetDonateForm</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Matomo Changelog</name>
+		<category>
+			<id>About Matomo</id>
+			<name>About Matomo</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>RssWidget</module>
+		<action>rssChangelog</action>
+		<order>99</order>
+		<parameters>
+			<module>RssWidget</module>
+			<action>rssChangelog</action>
+		</parameters>
+		<uniqueId>widgetRssWidgetrssChangelog</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Insights Overview</name>
+		<category>
+			<id>Insights_WidgetCategory</id>
+			<name>Insights</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>Insights</module>
+		<action>getInsightsOverview</action>
+		<order>99</order>
+		<parameters>
+			<module>Insights</module>
+			<action>getInsightsOverview</action>
+		</parameters>
+		<uniqueId>widgetInsightsgetInsightsOverview</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
 		<name>Premium Features &amp; Services for Matomo</name>
 		<category>
 			<id>About Matomo</id>
@@ -3475,6 +3399,82 @@
 			<action>promoServices</action>
 		</parameters>
 		<uniqueId>widgetProfessionalServicespromoServices</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Premium Features</name>
+		<category>
+			<id>About Matomo</id>
+			<name>About Matomo</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>Marketplace</module>
+		<action>getPremiumFeatures</action>
+		<order>20</order>
+		<parameters>
+			<module>Marketplace</module>
+			<action>getPremiumFeatures</action>
+		</parameters>
+		<uniqueId>widgetMarketplacegetPremiumFeatures</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Latest Marketplace Updates</name>
+		<category>
+			<id>About Matomo</id>
+			<name>About Matomo</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>Marketplace</module>
+		<action>getNewPlugins</action>
+		<order>19</order>
+		<parameters>
+			<module>Marketplace</module>
+			<action>getNewPlugins</action>
+		</parameters>
+		<uniqueId>widgetMarketplacegetNewPlugins</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Movers and Shakers</name>
+		<category>
+			<id>Insights_WidgetCategory</id>
+			<name>Insights</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>Insights</module>
+		<action>getOverallMoversAndShakers</action>
+		<order>99</order>
+		<parameters>
+			<module>Insights</module>
+			<action>getOverallMoversAndShakers</action>
+		</parameters>
+		<uniqueId>widgetInsightsgetOverallMoversAndShakers</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Example Widget Name</name>
+		<category>
+			<id>About Matomo</id>
+			<name>About Matomo</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>ExamplePlugin</module>
+		<action>myExampleWidget</action>
+		<order>99</order>
+		<parameters>
+			<module>ExamplePlugin</module>
+			<action>myExampleWidget</action>
+		</parameters>
+		<uniqueId>widgetExamplePluginmyExampleWidget</uniqueId>
 		<isWide>0</isWide>
 	</row>
 </result>
