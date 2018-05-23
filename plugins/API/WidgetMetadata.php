@@ -67,6 +67,8 @@ class WidgetMetadata
             }
         }
 
+        usort($flat, array($this, 'sortWidgets'));
+
         return $flat;
     }
 
