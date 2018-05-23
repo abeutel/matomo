@@ -94,6 +94,8 @@ after_script:
   - cat $PIWIK_ROOT_DIR/tmp/logs/piwik.log
   - cat $PIWIK_ROOT_DIR/config/config.ini.php
 
+  - cat $PIWIK_ROOT_DIR/tests/PHPUnit/System/expected/test_apiGetReportMetadata__API.getWidgetMetadata.xml
+
   # upload test artifacts (for debugging travis failures)
   - ./tests/travis/upload_artifacts.sh
 
