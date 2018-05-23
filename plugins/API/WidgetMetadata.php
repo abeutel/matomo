@@ -150,7 +150,11 @@ class WidgetMetadata
                 $subOrderB = $widgetB['subcategory']['order'];
 
                 if ($subOrderA === $subOrderB) {
-                    return 0;
+                    if ($widgetA['uniqueId'] == $widgetB['uniqueId']) {
+                        return 0;
+                    }
+
+                    return $widgetA['uniqueId'] > $widgetB['uniqueId'] ? 1 : -1;
                 }
 
                 return $subOrderA > $subOrderB ? 1 : -1;
