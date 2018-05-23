@@ -68,10 +68,7 @@ class WidgetMetadata
         }
 
         usort($flat, array($this, 'sortWidgets'));
-        foreach ($flat as $entry) {
-            print "{$entry['uniqueId']}\n";
-        }
-        exit(1);
+
         return $flat;
     }
 
@@ -162,7 +159,7 @@ class WidgetMetadata
 
                 return $subOrderA > $subOrderB ? 1 : -1;
 
-            } elseif (!empty($orderA)) {
+            } elseif (!empty($widgetA['subcategory']['order'])) {
 
                 return 1;
             }
