@@ -176,30 +176,33 @@ class WidgetsList
         $list = new static;
 
         $widgets = StaticContainer::get('Piwik\Plugin\WidgetsProvider');
-
+print "\nContainers\n\n";
         $widgetContainerConfigs = $widgets->getWidgetContainerConfigs();
         foreach ($widgetContainerConfigs as $config) {
+            print $config->getUniqueId()."\n";
             if ($config->isEnabled()) {
                 $list->addWidgetConfig($config);
             }
         }
-
+print "\nWidgets\n\n";
         $widgetConfigs = $widgets->getWidgetConfigs();
         foreach ($widgetConfigs as $widget) {
+            print $widget->getUniqueId()."\n";
             if ($widget->isEnabled()) {
                 $list->addWidgetConfig($widget);
             }
         }
-
+print "\nReports\n\n";
         $reports = StaticContainer::get('Piwik\Plugin\ReportsProvider');
         $reports = $reports->getAllReports();
         foreach ($reports as $report) {
+            print $report->getId()."\n";
             if ($report->isEnabled()) {
                 $factory = new ReportWidgetFactory($report);
                 $report->configureWidgets($list, $factory);
             }
         }
-
+exit(1);
         /**
          * Triggered to filter widgets.
          *
