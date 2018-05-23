@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <result>
 	<row>
-		<name>Visitors in Real-time</name>
-		<category>
-			<id>Live!</id>
-			<name>Live!</name>
-			<order>2</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>Live</module>
-		<action>widget</action>
-		<order>20</order>
-		<parameters>
-			<module>Live</module>
-			<action>widget</action>
-		</parameters>
-		<uniqueId>widgetLivewidget</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
 		<name>Real Time Visitor Count</name>
 		<category>
 			<id>Live!</id>
@@ -39,6 +20,122 @@
 		<isWide>0</isWide>
 		<viewDataTable>table</viewDataTable>
 		<isReport>1</isReport>
+	</row>
+	<row>
+		<name>Visitors in Real-time</name>
+		<category>
+			<id>Live!</id>
+			<name>Live!</name>
+			<order>2</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>Live</module>
+		<action>widget</action>
+		<order>20</order>
+		<parameters>
+			<module>Live</module>
+			<action>widget</action>
+		</parameters>
+		<uniqueId>widgetLivewidget</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Visits Overview (with graph)</name>
+		<category>
+			<id>General_Visitors</id>
+			<name>Visitors</name>
+			<order>5</order>
+			<icon>icon-reporting-visitors</icon>
+		</category>
+		<subcategory />
+		<module>CoreHome</module>
+		<action>renderWidgetContainer</action>
+		<order>99</order>
+		<parameters>
+			<module>CoreHome</module>
+			<action>renderWidgetContainer</action>
+			<containerId>VisitOverviewWithGraph</containerId>
+		</parameters>
+		<uniqueId>widgetVisitOverviewWithGraph</uniqueId>
+		<isWide>0</isWide>
+		<layout />
+		<isContainer>1</isContainer>
+		<widgets>
+			<row>
+				<name>Visits Over Time</name>
+				<category>
+					<id>General_Visitors</id>
+					<name>Visitors</name>
+					<order>99</order>
+					<icon />
+				</category>
+				<subcategory>
+					<id>General_Overview</id>
+					<name>Overview</name>
+					<order>99</order>
+				</subcategory>
+				<module>VisitsSummary</module>
+				<action>getEvolutionGraph</action>
+				<order>5</order>
+				<parameters>
+					<forceView>1</forceView>
+					<viewDataTable>graphEvolution</viewDataTable>
+					<module>VisitsSummary</module>
+					<action>getEvolutionGraph</action>
+				</parameters>
+				<uniqueId>widgetVisitsSummarygetEvolutionGraphforceView1viewDataTablegraphEvolution</uniqueId>
+				<isWide>0</isWide>
+				<viewDataTable>graphEvolution</viewDataTable>
+				<isReport>1</isReport>
+			</row>
+			<row>
+				<name>Visits Overview</name>
+				<category>
+					<id>General_Visitors</id>
+					<name>Visitors</name>
+					<order>99</order>
+					<icon />
+				</category>
+				<subcategory>
+					<id>General_Overview</id>
+					<name>Overview</name>
+					<order>99</order>
+				</subcategory>
+				<module>VisitsSummary</module>
+				<action>get</action>
+				<order>10</order>
+				<parameters>
+					<forceView>1</forceView>
+					<viewDataTable>sparklines</viewDataTable>
+					<module>VisitsSummary</module>
+					<action>get</action>
+				</parameters>
+				<uniqueId>widgetVisitsSummarygetforceView1viewDataTablesparklines</uniqueId>
+				<isWide>0</isWide>
+				<viewDataTable>sparklines</viewDataTable>
+				<isReport>1</isReport>
+			</row>
+		</widgets>
+	</row>
+	<row>
+		<name>Visitor profile</name>
+		<category>
+			<id>General_Visitors</id>
+			<name>Visitors</name>
+			<order>5</order>
+			<icon>icon-reporting-visitors</icon>
+		</category>
+		<subcategory />
+		<module>Live</module>
+		<action>getVisitorProfilePopup</action>
+		<order>25</order>
+		<parameters>
+			<module>Live</module>
+			<action>getVisitorProfilePopup</action>
+		</parameters>
+		<uniqueId>widgetLivegetVisitorProfilePopup</uniqueId>
+		<isWide>0</isWide>
 	</row>
 	<row>
 		<name>Visits Over Time</name>
@@ -596,84 +693,6 @@
 		<isReport>1</isReport>
 	</row>
 	<row>
-		<name>Visits Overview (with graph)</name>
-		<category>
-			<id>General_Visitors</id>
-			<name>Visitors</name>
-			<order>5</order>
-			<icon>icon-reporting-visitors</icon>
-		</category>
-		<subcategory />
-		<module>CoreHome</module>
-		<action>renderWidgetContainer</action>
-		<order>99</order>
-		<parameters>
-			<module>CoreHome</module>
-			<action>renderWidgetContainer</action>
-			<containerId>VisitOverviewWithGraph</containerId>
-		</parameters>
-		<uniqueId>widgetVisitOverviewWithGraph</uniqueId>
-		<isWide>0</isWide>
-		<layout />
-		<isContainer>1</isContainer>
-		<widgets>
-			<row>
-				<name>Visits Over Time</name>
-				<category>
-					<id>General_Visitors</id>
-					<name>Visitors</name>
-					<order>99</order>
-					<icon />
-				</category>
-				<subcategory>
-					<id>General_Overview</id>
-					<name>Overview</name>
-					<order>99</order>
-				</subcategory>
-				<module>VisitsSummary</module>
-				<action>getEvolutionGraph</action>
-				<order>5</order>
-				<parameters>
-					<forceView>1</forceView>
-					<viewDataTable>graphEvolution</viewDataTable>
-					<module>VisitsSummary</module>
-					<action>getEvolutionGraph</action>
-				</parameters>
-				<uniqueId>widgetVisitsSummarygetEvolutionGraphforceView1viewDataTablegraphEvolution</uniqueId>
-				<isWide>0</isWide>
-				<viewDataTable>graphEvolution</viewDataTable>
-				<isReport>1</isReport>
-			</row>
-			<row>
-				<name>Visits Overview</name>
-				<category>
-					<id>General_Visitors</id>
-					<name>Visitors</name>
-					<order>99</order>
-					<icon />
-				</category>
-				<subcategory>
-					<id>General_Overview</id>
-					<name>Overview</name>
-					<order>99</order>
-				</subcategory>
-				<module>VisitsSummary</module>
-				<action>get</action>
-				<order>10</order>
-				<parameters>
-					<forceView>1</forceView>
-					<viewDataTable>sparklines</viewDataTable>
-					<module>VisitsSummary</module>
-					<action>get</action>
-				</parameters>
-				<uniqueId>widgetVisitsSummarygetforceView1viewDataTablesparklines</uniqueId>
-				<isWide>0</isWide>
-				<viewDataTable>sparklines</viewDataTable>
-				<isReport>1</isReport>
-			</row>
-		</widgets>
-	</row>
-	<row>
 		<name>Language code</name>
 		<category>
 			<id>General_Visitors</id>
@@ -723,6 +742,33 @@
 		<uniqueId>widgetVisitFrequencygetEvolutionGraphforceView1viewDataTablegraphEvolution</uniqueId>
 		<isWide>0</isWide>
 		<viewDataTable>graphEvolution</viewDataTable>
+		<isReport>1</isReport>
+	</row>
+	<row>
+		<name>Frequency Overview</name>
+		<category>
+			<id>General_Visitors</id>
+			<name>Visitors</name>
+			<order>5</order>
+			<icon>icon-reporting-visitors</icon>
+		</category>
+		<subcategory>
+			<id>VisitorInterest_Engagement</id>
+			<name>Engagement</name>
+			<order>30</order>
+		</subcategory>
+		<module>VisitFrequency</module>
+		<action>get</action>
+		<order>2</order>
+		<parameters>
+			<forceView>1</forceView>
+			<viewDataTable>sparklines</viewDataTable>
+			<module>VisitFrequency</module>
+			<action>get</action>
+		</parameters>
+		<uniqueId>widgetVisitFrequencygetforceView1viewDataTablesparklines</uniqueId>
+		<isWide>0</isWide>
+		<viewDataTable>sparklines</viewDataTable>
 		<isReport>1</isReport>
 	</row>
 	<row>
@@ -823,52 +869,6 @@
 		<uniqueId>widgetVisitorInterestgetNumberOfVisitsPerVisitDuration</uniqueId>
 		<isWide>0</isWide>
 		<viewDataTable>cloud</viewDataTable>
-		<isReport>1</isReport>
-	</row>
-	<row>
-		<name>Visitor profile</name>
-		<category>
-			<id>General_Visitors</id>
-			<name>Visitors</name>
-			<order>5</order>
-			<icon>icon-reporting-visitors</icon>
-		</category>
-		<subcategory />
-		<module>Live</module>
-		<action>getVisitorProfilePopup</action>
-		<order>25</order>
-		<parameters>
-			<module>Live</module>
-			<action>getVisitorProfilePopup</action>
-		</parameters>
-		<uniqueId>widgetLivegetVisitorProfilePopup</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>Frequency Overview</name>
-		<category>
-			<id>General_Visitors</id>
-			<name>Visitors</name>
-			<order>5</order>
-			<icon>icon-reporting-visitors</icon>
-		</category>
-		<subcategory>
-			<id>VisitorInterest_Engagement</id>
-			<name>Engagement</name>
-			<order>30</order>
-		</subcategory>
-		<module>VisitFrequency</module>
-		<action>get</action>
-		<order>2</order>
-		<parameters>
-			<forceView>1</forceView>
-			<viewDataTable>sparklines</viewDataTable>
-			<module>VisitFrequency</module>
-			<action>get</action>
-		</parameters>
-		<uniqueId>widgetVisitFrequencygetforceView1viewDataTablesparklines</uniqueId>
-		<isWide>0</isWide>
-		<viewDataTable>sparklines</viewDataTable>
 		<isReport>1</isReport>
 	</row>
 	<row>
@@ -3212,25 +3212,6 @@
 		<isReport>1</isReport>
 	</row>
 	<row>
-		<name>Insights Overview</name>
-		<category>
-			<id>Insights_WidgetCategory</id>
-			<name>Insights</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>Insights</module>
-		<action>getInsightsOverview</action>
-		<order>99</order>
-		<parameters>
-			<module>Insights</module>
-			<action>getInsightsOverview</action>
-		</parameters>
-		<uniqueId>widgetInsightsgetInsightsOverview</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
 		<name>Premium Features</name>
 		<category>
 			<id>About Matomo</id>
@@ -3250,22 +3231,22 @@
 		<isWide>0</isWide>
 	</row>
 	<row>
-		<name>Welcome!</name>
+		<name>Movers and Shakers</name>
 		<category>
-			<id>About Matomo</id>
-			<name>About Matomo</name>
+			<id>Insights_WidgetCategory</id>
+			<name>Insights</name>
 			<order>99</order>
 			<icon />
 		</category>
 		<subcategory />
-		<module>CoreHome</module>
-		<action>getPromoVideo</action>
-		<order>10</order>
+		<module>Insights</module>
+		<action>getOverallMoversAndShakers</action>
+		<order>99</order>
 		<parameters>
-			<module>CoreHome</module>
-			<action>getPromoVideo</action>
+			<module>Insights</module>
+			<action>getOverallMoversAndShakers</action>
 		</parameters>
-		<uniqueId>widgetCoreHomegetPromoVideo</uniqueId>
+		<uniqueId>widgetInsightsgetOverallMoversAndShakers</uniqueId>
 		<isWide>0</isWide>
 	</row>
 	<row>
@@ -3288,7 +3269,26 @@
 		<isWide>0</isWide>
 	</row>
 	<row>
-		<name>System Summary</name>
+		<name>Insights Overview</name>
+		<category>
+			<id>Insights_WidgetCategory</id>
+			<name>Insights</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>Insights</module>
+		<action>getInsightsOverview</action>
+		<order>99</order>
+		<parameters>
+			<module>Insights</module>
+			<action>getInsightsOverview</action>
+		</parameters>
+		<uniqueId>widgetInsightsgetInsightsOverview</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Support Matomo!</name>
 		<category>
 			<id>About Matomo</id>
 			<name>About Matomo</name>
@@ -3297,13 +3297,32 @@
 		</category>
 		<subcategory />
 		<module>CoreHome</module>
-		<action>getSystemSummary</action>
-		<order>15</order>
+		<action>getDonateForm</action>
+		<order>5</order>
 		<parameters>
 			<module>CoreHome</module>
-			<action>getSystemSummary</action>
+			<action>getDonateForm</action>
 		</parameters>
-		<uniqueId>widgetCoreHomegetSystemSummary</uniqueId>
+		<uniqueId>widgetCoreHomegetDonateForm</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>System Check</name>
+		<category>
+			<id>About Matomo</id>
+			<name>About Matomo</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>Installation</module>
+		<action>getSystemCheck</action>
+		<order>16</order>
+		<parameters>
+			<module>Installation</module>
+			<action>getSystemCheck</action>
+		</parameters>
+		<uniqueId>widgetInstallationgetSystemCheck</uniqueId>
 		<isWide>0</isWide>
 	</row>
 	<row>
@@ -3345,60 +3364,22 @@
 		<isWide>0</isWide>
 	</row>
 	<row>
-		<name>Movers and Shakers</name>
+		<name>SEO Rankings</name>
 		<category>
-			<id>Insights_WidgetCategory</id>
-			<name>Insights</name>
+			<id>SEO</id>
+			<name>SEO</name>
 			<order>99</order>
 			<icon />
 		</category>
 		<subcategory />
-		<module>Insights</module>
-		<action>getOverallMoversAndShakers</action>
+		<module>SEO</module>
+		<action>getRank</action>
 		<order>99</order>
 		<parameters>
-			<module>Insights</module>
-			<action>getOverallMoversAndShakers</action>
+			<module>SEO</module>
+			<action>getRank</action>
 		</parameters>
-		<uniqueId>widgetInsightsgetOverallMoversAndShakers</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>System Check</name>
-		<category>
-			<id>About Matomo</id>
-			<name>About Matomo</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>Installation</module>
-		<action>getSystemCheck</action>
-		<order>16</order>
-		<parameters>
-			<module>Installation</module>
-			<action>getSystemCheck</action>
-		</parameters>
-		<uniqueId>widgetInstallationgetSystemCheck</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>Example Widget Name</name>
-		<category>
-			<id>About Matomo</id>
-			<name>About Matomo</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>ExamplePlugin</module>
-		<action>myExampleWidget</action>
-		<order>99</order>
-		<parameters>
-			<module>ExamplePlugin</module>
-			<action>myExampleWidget</action>
-		</parameters>
-		<uniqueId>widgetExamplePluginmyExampleWidget</uniqueId>
+		<uniqueId>widgetSEOgetRank</uniqueId>
 		<isWide>0</isWide>
 	</row>
 	<row>
@@ -3421,7 +3402,26 @@
 		<isWide>0</isWide>
 	</row>
 	<row>
-		<name>Support Matomo!</name>
+		<name>Example Widget Name</name>
+		<category>
+			<id>About Matomo</id>
+			<name>About Matomo</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>ExamplePlugin</module>
+		<action>myExampleWidget</action>
+		<order>99</order>
+		<parameters>
+			<module>ExamplePlugin</module>
+			<action>myExampleWidget</action>
+		</parameters>
+		<uniqueId>widgetExamplePluginmyExampleWidget</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>System Summary</name>
 		<category>
 			<id>About Matomo</id>
 			<name>About Matomo</name>
@@ -3430,13 +3430,32 @@
 		</category>
 		<subcategory />
 		<module>CoreHome</module>
-		<action>getDonateForm</action>
-		<order>5</order>
+		<action>getSystemSummary</action>
+		<order>15</order>
 		<parameters>
 			<module>CoreHome</module>
-			<action>getDonateForm</action>
+			<action>getSystemSummary</action>
 		</parameters>
-		<uniqueId>widgetCoreHomegetDonateForm</uniqueId>
+		<uniqueId>widgetCoreHomegetSystemSummary</uniqueId>
+		<isWide>0</isWide>
+	</row>
+	<row>
+		<name>Welcome!</name>
+		<category>
+			<id>About Matomo</id>
+			<name>About Matomo</name>
+			<order>99</order>
+			<icon />
+		</category>
+		<subcategory />
+		<module>CoreHome</module>
+		<action>getPromoVideo</action>
+		<order>10</order>
+		<parameters>
+			<module>CoreHome</module>
+			<action>getPromoVideo</action>
+		</parameters>
+		<uniqueId>widgetCoreHomegetPromoVideo</uniqueId>
 		<isWide>0</isWide>
 	</row>
 	<row>
@@ -3456,25 +3475,6 @@
 			<action>promoServices</action>
 		</parameters>
 		<uniqueId>widgetProfessionalServicespromoServices</uniqueId>
-		<isWide>0</isWide>
-	</row>
-	<row>
-		<name>SEO Rankings</name>
-		<category>
-			<id>SEO</id>
-			<name>SEO</name>
-			<order>99</order>
-			<icon />
-		</category>
-		<subcategory />
-		<module>SEO</module>
-		<action>getRank</action>
-		<order>99</order>
-		<parameters>
-			<module>SEO</module>
-			<action>getRank</action>
-		</parameters>
-		<uniqueId>widgetSEOgetRank</uniqueId>
 		<isWide>0</isWide>
 	</row>
 </result>
