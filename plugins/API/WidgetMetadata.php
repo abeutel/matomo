@@ -35,7 +35,7 @@ class WidgetMetadata
 
         foreach ($widgetsList->getWidgetConfigs() as $widgetConfig) {
             $metadataOverrides = [];
-print $widgetConfig->getUniqueId()."\n";
+
             /** @var WidgetConfig[] $widgets */
             $widgets = array($widgetConfig);
             if ($widgetConfig instanceof WidgetContainerConfig) {
@@ -66,9 +66,12 @@ print $widgetConfig->getUniqueId()."\n";
                 $flat[] = $this->buildWidgetMetadata($widget, $categoryList, $metadataOverrides);
             }
         }
-exit(1);
-        usort($flat, array($this, 'sortWidgets'));
 
+        usort($flat, array($this, 'sortWidgets'));
+        foreach ($flat as $entry) {
+            print "{$entry['uniqueId']}\n";
+        }
+        exit(1);
         return $flat;
     }
 
