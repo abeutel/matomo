@@ -20,7 +20,6 @@
 
 <testsuites>
     <testsuite name="SystemTests">
-        <directory>./System</directory>
         <directory>../../plugins/*/tests</directory><!-- There should be actually a tests/System but this way we make sure to execute all tests even if some are not moved to correct subdirectory. We will execute Unit and Integration tests twice :( ... -->
         <directory>../../plugins/*/Test</directory>
         <exclude>../../plugins/*/tests/Integration</exclude>
@@ -29,7 +28,7 @@
         <exclude>../../plugins/*/Test/Unit</exclude>
     </testsuite>
     <testsuite name="SystemTestsCore">
-        <directory>./System</directory>
+        <file>./System/ApiGetReportMetadataTest.php</file>
     </testsuite>
     <testsuite name="SystemTestsPlugins">
         <directory>../../plugins/*/tests</directory><!-- There should be actually a tests/System but this way we make sure to execute all tests even if some are not moved to correct subdirectory. We will execute Unit and Integration tests twice :( ... -->
